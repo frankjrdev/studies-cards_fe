@@ -1,9 +1,6 @@
-import Image from "next/image";
+// app/page.tsx
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col items-center justify-center h-screen text-2xl">
-      <h1>Hello world</h1>
-    </div>
-  );
+  redirect("/dashboard");
 }
