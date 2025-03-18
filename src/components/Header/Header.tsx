@@ -1,7 +1,8 @@
 "use client";
 import { useSidebarStore } from "@/store";
-import { Bell, Grid, Image, Search } from "lucide-react";
+import { Bell, Search } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Header({ title }: { title: string }) {
   const isSidebarOpened = useSidebarStore((state) => state.isSidebarOpened);
@@ -31,25 +32,21 @@ export default function Header({ title }: { title: string }) {
 
       {/* Derecha: Iconos y perfil */}
       <div className="flex items-center gap-4">
-        <Grid
-          size={24}
-          className="text-gray-500 cursor-pointer hover:text-gray-700"
-        />
         <Bell
-          size={24}
+          size={18}
           className="text-gray-500 cursor-pointer hover:text-gray-700"
         />
 
         {/* Perfil */}
         <div className="flex items-center gap-2 cursor-pointer">
           <Image
-            src="/profile.jpg" // Cambia por la URL real del usuario
+            src="/assets/images/profile.jpg" // ✅ Ruta desde /public
             alt="User"
             width={32}
             height={32}
             className="rounded-full"
           />
-          |<span className="text-gray-700 font-medium">Sadi Bajio</span>
+          <span className="text-gray-700 font-medium">Edith Peroza</span>
         </div>
       </div>
     </header>

@@ -20,8 +20,8 @@ export default function AppContainer({
       <div className="flex flex-col flex-1">
         <Header title={title} /> {/* Header fijo arriba */}
         <main
-          className={`flex-1 p-6 overflow-auto transition-all duration-300 ease-in-out ${
-            isSidebarOpened ? "ml-64" : "ml-0"
+          className={`bg-[#F6F5FA] flex-1 p-6 overflow-auto transition-all duration-300 ease-in-out ${
+            isSidebarOpened ? "ml-0" : "ml-0"
           }`}
         >
           {children}
