@@ -82,12 +82,12 @@ export default function SideBar() {
           </div>
         </div>
       </div>
-      <button
+      {/* <button
         onClick={toggleSidebar}
         className={`${isSidebarOpened ? "rounded-l-lg right-0" : "right-[-40px] rounded-r-lg"} absolute top-12 p-2 w-10 h-10 bg-[#F7B1CB] shadow-md hover:cursor-pointer`}
       >
         <span className="text-gray-700">{isSidebarOpened ? "◄" : "►"}</span>
-      </button>
+      </button> */}
     </div>
   );
 }
