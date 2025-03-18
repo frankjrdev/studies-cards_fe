@@ -51,7 +51,9 @@ export default function SideBar() {
                 <li key={item.name} className="mb-8">
                   <Link
                     href={item.link}
-                    className="flex items-center text-grey-medium hover:text-[#8869A5]"
+                    className={`flex items-center text-grey-medium hover:text-[#8869A5] ${
+                      path === item.link ? "text-[#8869A5] font-semibold" : ""
+                    }`}
                   >
                     <span className="mr-2">{item.icon}</span>
                     <span>{item.name}</span>
@@ -67,7 +69,9 @@ export default function SideBar() {
                 <li key={item.name} className="mb-8">
                   <Link
                     href={item.link}
-                    className="flex items-center text-grey-medium hover:text-[#8869A5]"
+                    className={`flex items-center text-grey-medium hover:text-[#8869A5] ${
+                      path === item.link ? "text-[#8869A5] font-semibold" : ""
+                    }`}
                   >
                     <span className="mr-2">{item.icon}</span>
                     <span>{item.name}</span>
