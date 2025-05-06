@@ -3,6 +3,7 @@ import { useSidebarStore } from "@/store";
 import { Bell, Search } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import { FileUpload } from "@/components/FileUpload/FileUpload";
 
 export default function Header({ title }: { title: string }) {
   const isSidebarOpened = useSidebarStore((state) => state.isSidebarOpened);
@@ -32,6 +33,7 @@ export default function Header({ title }: { title: string }) {
 
       {/* Derecha: Iconos y perfil */}
       <div className="flex items-center gap-4">
+        <FileUpload />
         <Bell
           size={18}
           className="text-gray-500 cursor-pointer hover:text-gray-700"
